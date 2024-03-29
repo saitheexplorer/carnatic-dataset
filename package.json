@@ -4,7 +4,7 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "build": "cat ./data/ragas.csv | node scripts/index.js > ./data/ragas.json"
+    "build": "cat ./data/ragas.csv | node scripts/generate-raga-json.js > ./data/ragas.json"
   },
   "dependencies": {
     "@types/node": "^20.11.30",
