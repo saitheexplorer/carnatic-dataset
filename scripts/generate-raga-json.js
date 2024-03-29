@@ -9,10 +9,10 @@ function formatRaga(raga) {
   const formatted = {
     name: raga.name,
     parent: parseInt(raga.parent),
-    alternate_names: raga.alternate_names.split(",").filter((x) => x),
+    alternate_names: raga.alternate_names?.split(",").filter((x) => x),
     arohanam: raga.arohanam.split(","),
     avarohanam: raga.avarohanam.split(","),
-    anya_swarams: raga.anya_swarams.split(",").filter((x) => x),
+    anya_svarams: raga.anya_svarams?.split(",").filter((x) => x),
   };
 
   if (raga.melakarta) formatted.melakarta = parseInt(raga.melakarta);
