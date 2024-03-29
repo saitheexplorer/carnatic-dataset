@@ -5,14 +5,16 @@ const reader = csv.createStream({
   enclosedChar: '"',
 });
 
+const identity = (x) => x;
+
 function formatRaga(raga) {
   const formatted = {
     name: raga.name,
     parent: parseInt(raga.parent),
-    alternate_names: raga.alternate_names?.split(",").filter((x) => x),
-    arohanam: raga.arohanam.split(","),
-    avarohanam: raga.avarohanam.split(","),
-    anya_svarams: raga.anya_svarams?.split(",").filter((x) => x),
+    alternate_names: raga.alternate_names?.split(",").filter(identity),
+    arohanam: raga.arohanam.split(" "),
+    avarohanam: raga.avarohanam.split(" "),
+    anya_svarams: raga.anya_svarams?.split(" ").filter(identity),
   };
 
   if (raga.melakarta) formatted.melakarta = parseInt(raga.melakarta);
