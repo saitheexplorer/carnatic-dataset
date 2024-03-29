@@ -1,0 +1,14 @@
+{
+  "name": "carnatic-dataset",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "scripts": {
+    "build": "cat ./data/ragas.csv | node scripts/index.js > ./data/ragas.json"
+  },
+  "dependencies": {
+    "@types/node": "^20.11.30",
+    "csv-stream": "^0.2.0",
+    "highland": "^2.13.5"
+  }
+}
